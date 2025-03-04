@@ -1,23 +1,13 @@
 //your JS code here. If required.
-function getFormvalue(event) {
-    event.preventDefault(); // Prevent form from refreshing the page
-
-    // Get trimmed values from input fields
-    const firstName = document.getElementById("fname").value.trim();
-    const lastName = document.getElementById("lname").value.trim();
-
-    // Edge Case Handling
-    if (!firstName && !lastName) {
-        alert("Please enter your first and last name.");
-        return;
-    } else if (!firstName) {
-        alert("Please enter your first name.");
-        return;
-    } else if (!lastName) {
-        alert("Please enter your last name.");
-        return;
-    }
-
-    // Display full name in an alert
-    alert(`${firstName} ${lastName}`);
+//your JS code here. If required.
+let firstname = document.querySelector("#fname");
+let lastname = document.querySelector("#lname");
+let phone = document.querySelector("#phn");
+let emailid = document.querySelector("#email");
+let form = document.querySelector("form");
+function showAlert(event) {
+	  event.preventDefault();
+	alert(`First Name: ${firstname.value}\nLast Name: ${lastname.value}\nPhone Number: ${phone.value}\nEmail ID: ${emailid.value}`)
 }
+
+form.addEventListener("submit",showAlert);
