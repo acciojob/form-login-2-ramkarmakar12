@@ -1,13 +1,11 @@
 //your JS code here. If required.
-//your JS code here. If required.
-let firstname = document.querySelector("#fname");
-let lastname = document.querySelector("#lname");
-let phone = document.querySelector("#phn");
-let emailid = document.querySelector("#email");
-let form = document.querySelector("form");
-function showAlert(event) {
-	  event.preventDefault();
-	alert(`First Name: ${firstname.value}\nLast Name: ${lastname.value}\nPhone Number: ${phone.value}\nEmail ID: ${emailid.value}`)
-}
+let inputname = document.getElementById('fname')
+let inputlname = document.getElementById('lname')
+let inputPhone= document.getElementById('phone')
+let inputMail = document.getElementById('email')
+let inputBtn = document.querySelector('button')
 
-form.addEventListener("submit",showAlert);
+
+inputBtn.addEventListener('click',()=>{
+            alert(`First Name: ${inputname.value} Last Name: ${inputlname.value} Phone Number:${inputPhone.value} Email ID:${inputMail.value}`)
+})
